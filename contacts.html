@@ -3,94 +3,334 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MedLife - Контакты</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МедКлиника - Контакты</title>
 
     <!-- Подключение CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- Верхняя информационная панель -->
+    <div class="topbar">
+
+        <div class="container topbar-content">
+
+            <!-- Левая часть -->
+            <div class="topbar-left">
+
+                <span>📞 +7 (495) 123-45-67</span>
+
+                <span>✉ info@medclinic.ru</span>
+
+            </div>
+
+            <!-- Правая часть -->
+            <div class="topbar-right">
+
+                <span>📍 Москва, ул. Примерная, 10</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- Шапка сайта -->
     <header>
 
-        <!-- Логотип -->
-        <div class="logo">
-            <a href="index.html">MedLife</a>
-        </div>
+        <div class="container header-content">
 
-        <!-- Навигационное меню -->
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="service.html">Услуги</a>
-            <a href="contacts.html">Контакты</a>
-        </nav>
+            <!-- Логотип -->
+            <div class="logo">
+
+                <a href="index.html">
+                    ❤ МедКлиника
+                </a>
+
+            </div>
+
+            <!-- Навигация -->
+            <nav>
+
+                <a href="index.html">Главная</a>
+
+                <a href="#">О компании</a>
+
+                <a href="services.html">Услуги</a>
+
+                <a href="#">Новости</a>
+
+                <a href="#">Портфолио</a>
+
+                <a href="#">Акции</a>
+
+                <a class="active" href="contacts.html">Контакты</a>
+
+            </nav>
+
+            <!-- Кнопки -->
+            <div class="header-buttons">
+
+                <button class="login-btn">
+                    Войти
+                </button>
+
+                <button class="primary-btn">
+                    Записаться
+                </button>
+
+            </div>
+
+        </div>
 
     </header>
 
-    <!-- Основной контент -->
-    <main>
+    <!-- Hero section -->
+    <section class="page-hero">
 
-        <!-- Контактная информация -->
-        <section>
+        <div class="container">
 
-            <h1>Контакты</h1>
-
-            <p>
-                Адрес: г. Москва, ул. Центральная, д. 15
-            </p>
+            <h1>
+                Свяжитесь с нами
+            </h1>
 
             <p>
-                Телефон: +7 (999) 123-45-67
+                Мы готовы ответить на ваши вопросы и записать вас на прием
             </p>
 
-            <p>
-                Email: info@medlife.ru
-            </p>
+        </div>
 
-        </section>
+    </section>
 
-        <!-- Форма обратной связи -->
-        <section>
+    <!-- Контактные карточки -->
+    <section class="contacts-info">
 
-            <h2>Обратная связь</h2>
+        <div class="container contacts-cards">
 
-            <form>
+            <!-- Карточка -->
+            <div class="contact-card">
 
-                <label>Ваше имя</label>
-                <br>
-                <input type="text">
+                <div class="contact-icon">
+                    📞
+                </div>
 
-                <br><br>
+                <h3>
+                    Телефон
+                </h3>
 
-                <label>Ваш email</label>
-                <br>
-                <input type="email">
+                <p>
+                    +7 (495) 123-45-67
+                </p>
 
-                <br><br>
+                <p>
+                    +7 (495) 123-45-68
+                </p>
 
-                <label>Сообщение</label>
-                <br>
-                <textarea rows="5"></textarea>
+            </div>
 
-                <br><br>
+            <!-- Карточка -->
+            <div class="contact-card">
 
-                <button type="submit">
-                    Отправить
-                </button>
+                <div class="contact-icon">
+                    ✉
+                </div>
 
-            </form>
+                <h3>
+                    Email
+                </h3>
 
-        </section>
+                <p>
+                    info@medclinic.ru
+                </p>
 
-    </main>
+                <p>
+                    support@medclinic.ru
+                </p>
 
-    <!-- Подвал сайта -->
+            </div>
+
+            <!-- Карточка -->
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Адрес
+                </h3>
+
+                <p>
+                    Москва, ул. Примерная, 10
+                </p>
+
+                <p>
+                    метро "Примерная"
+                </p>
+
+            </div>
+
+            <!-- Карточка -->
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    🕒
+                </div>
+
+                <h3>
+                    Режим работы
+                </h3>
+
+                <p>
+                    Пн-Пт: 8:00-20:00
+                </p>
+
+                <p>
+                    Сб-Вс: 9:00-18:00
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Форма и карта -->
+    <section class="contact-form-section">
+
+        <div class="container form-layout">
+
+            <!-- Форма -->
+            <div class="form-block">
+
+                <h2>
+                    Запись на прием
+                </h2>
+
+                <p>
+                    Заполните форму, и мы свяжемся с вами
+                </p>
+
+                <form>
+
+                    <label>
+                        Ваше имя
+                    </label>
+
+                    <input type="text" placeholder="Иван Иванов">
+
+                    <label>
+                        Телефон
+                    </label>
+
+                    <input type="tel" placeholder="+7 (___) ___-__-__">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input type="email" placeholder="example@mail.ru">
+
+                    <label>
+                        Выберите услугу
+                    </label>
+
+                    <select>
+
+                        <option>
+                            Выберите услугу
+                        </option>
+
+                        <option>
+                            Терапия
+                        </option>
+
+                        <option>
+                            Кардиология
+                        </option>
+
+                        <option>
+                            Стоматология
+                        </option>
+
+                    </select>
+
+                    <label>
+                        Комментарий
+                    </label>
+
+                    <textarea rows="5"></textarea>
+
+                    <button class="primary-btn" type="submit">
+                        Отправить
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Правая колонка -->
+            <div class="right-column">
+
+                <!-- Карта -->
+                <div class="map-block">
+
+                    <div class="map-placeholder">
+
+                        <p>
+                            Карта расположения клиники
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Как добраться -->
+                <div class="route-block">
+
+                    <h2>
+                        Как добраться
+                    </h2>
+
+                    <p>
+                        <strong>На метро:</strong><br>
+                        Станция "Примерная", выход №3
+                    </p>
+
+                    <p>
+                        <strong>На автомобиле:</strong><br>
+                        Бесплатная парковка для пациентов
+                    </p>
+
+                    <p>
+                        <strong>На автобусе:</strong><br>
+                        Маршруты 12, 45, 67
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Подвал -->
     <footer>
 
-        <p>© 2026 MedLife</p>
+        <div class="container footer-content">
 
-        <p>Частная медицинская клиника</p>
+            <p>
+                © 2026 МедКлиника
+            </p>
+
+            <p>
+                Частная медицинская клиника
+            </p>
+
+        </div>
 
     </footer>
 

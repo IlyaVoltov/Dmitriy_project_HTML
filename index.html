@@ -3,90 +3,225 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MedLife - Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МедКлиника - Главная</title>
 
     <!-- Подключение CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- Верхняя информационная панель -->
+    <div class="topbar">
+
+        <div class="container topbar-content">
+
+            <!-- Левая часть -->
+            <div class="topbar-left">
+
+                <span>📞 +7 (000) 111-22-33</span>
+
+                <span>✉ info@пример.ru</span>
+
+            </div>
+
+            <!-- Правая часть -->
+            <div class="topbar-right">
+
+                <span>📍 Пример, ул. Примерная, 10</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- Шапка сайта -->
     <header>
 
-        <!-- Логотип -->
-        <div class="logo">
-            <a href="index.html">MedLife</a>
-        </div>
+        <div class="container header-content">
 
-        <!-- Навигационное меню -->
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="service.html">Услуги</a>
-            <a href="contacts.html">Контакты</a>
-        </nav>
+            <!-- Логотип -->
+            <div class="logo">
+
+                <a href="index.html">
+                    ❤ МедКлиника
+                </a>
+
+            </div>
+
+            <!-- Навигация -->
+            <nav>
+
+                <a class="active" href="index.html">Главная</a>
+
+                <a href="#">О компании</a>
+
+                <a href="services.html">Услуги</a>
+
+                <a href="#">Новости</a>
+
+                <a href="#">Портфолио</a>
+
+                <a href="#">Акции</a>
+
+                <a href="contacts.html">Контакты</a>
+
+            </nav>
+
+            <!-- Кнопки -->
+            <div class="header-buttons">
+
+                <button class="login-btn">
+                    Войти
+                </button>
+
+                <button class="primary-btn">
+                    Записаться
+                </button>
+
+            </div>
+
+        </div>
 
     </header>
 
-    <!-- Основной контент -->
-    <main>
+    <!-- Главный экран -->
+    <section class="hero">
 
-        <!-- Приветственный блок -->
-        <section class="hero">
+        <div class="container hero-content">
 
-            <h1>Частная медицинская клиника MedLife</h1>
+            <!-- Текст -->
+            <div class="hero-text">
 
-            <p>
-                Современная клиника с профессиональными врачами
-                и качественным медицинским обслуживанием.
-            </p>
-
-        </section>
-
-        <!-- Информация о клинике -->
-        <section>
-
-            <h2>О нашей клинике</h2>
-
-            <p>
-                MedLife предоставляет медицинские услуги более 10 лет.
-                Мы используем современное оборудование и индивидуальный
-                подход к каждому пациенту.
-            </p>
-
-        </section>
-
-        <!-- Новости -->
-        <section>
-
-            <h2>Новости</h2>
-
-            <article>
-                <h3>Открытие нового отделения</h3>
+                <h1>
+                    Забота о вашем здоровье — наш приоритет
+                </h1>
 
                 <p>
-                    В нашей клинике открылось новое диагностическое отделение.
+                    Современная частная клиника с полным спектром
+                    медицинских услуг. Профессиональная диагностика,
+                    лечение и профилактика.
                 </p>
-            </article>
 
-            <article>
-                <h3>Скидки на обследование</h3>
+                <!-- Кнопки -->
+                <div class="hero-buttons">
+
+                    <button class="white-btn">
+                        Записаться на прием
+                    </button>
+
+                    <button class="outline-btn">
+                        Наши услуги
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Изображение -->
+            <div class="hero-image">
+
+                <img src="images/doctor.png" alt="Доктор">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Преимущества -->
+    <section class="advantages">
+
+        <div class="container advantages-content">
+
+            <!-- Карточка -->
+            <div class="advantage-card">
+
+                <div class="icon">
+                    🏥
+                </div>
+
+                <h3>
+                    Современное оборудование
+                </h3>
 
                 <p>
-                    До конца месяца действует скидка 20% на комплексное обследование.
+                    Используем новейшие технологии диагностики.
                 </p>
-            </article>
 
-        </section>
+            </div>
 
-    </main>
+            <!-- Карточка -->
+            <div class="advantage-card">
 
-    <!-- Подвал сайта -->
+                <div class="icon">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Опытные врачи
+                </h3>
+
+                <p>
+                    В нашей клинике работают профессионалы.
+                </p>
+
+            </div>
+
+            <!-- Карточка -->
+            <div class="advantage-card">
+
+                <div class="icon">
+                    ❤
+                </div>
+
+                <h3>
+                    Забота о пациентах
+                </h3>
+
+                <p>
+                    Индивидуальный подход к каждому пациенту.
+                </p>
+
+            </div>
+
+            <!-- Карточка -->
+            <div class="advantage-card">
+
+                <div class="icon">
+                    📈
+                </div>
+
+                <h3>
+                    Высокое качество
+                </h3>
+
+                <p>
+                    Качественное обслуживание и лечение.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Подвал -->
     <footer>
 
-        <p>© 2026 MedLife</p>
+        <div class="container footer-content">
 
-        <p>Частная медицинская клиника</p>
+            <p>
+                © 2026 МедКлиника
+            </p>
+
+            <p>
+                Частная медицинская клиника
+            </p>
+
+        </div>
 
     </footer>
 
