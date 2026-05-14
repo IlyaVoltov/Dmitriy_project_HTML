@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const phone = document.getElementById('userPhone').value;
             const specialty = document.getElementById('userSpecialty').value;
 
-            // 3. Выводим красивое уведомление (Имитация работы Java/JS)
+            // 3. Выводим красивое уведомление (Имитация работы JS)
             alert('Благодарим вас, ' + name + '! \nВаша заявка на направление "' + specialty + '" принята. \nМы перезвоним вам по номеру ' + phone + ' в течение 15 минут.');
 
             // 4. Очищаем форму для нового ввода
