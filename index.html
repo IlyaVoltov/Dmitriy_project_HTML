@@ -1,197 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<!-- Метатеги и скрипты -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МедКлиника - Главная</title>
-
-    <!-- Подключение CSS -->
+    <title>МедКлиника — Главная страница</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- Основное содержимое, визуальная структура -->
 <body>
 
-    <!-- Верхняя информационная панель -->
     <div class="topbar">
         <div class="container topbar-content">
-            <!-- Левая часть -->
             <div class="topbar-left">
-                <span>📞 +7 (000) 111-22-33</span>
-                <span>✉ info@пример.ru</span>
+                <span>📞 +7 (495) 123-45-67</span>
+                <span>✉ info@medclinic.ru</span>
             </div>
-
-            <!-- Правая часть -->
             <div class="topbar-right">
-                <span>📍 Пример, ул. Примерная, 10</span>
+                <span>📍 Москва, ул. Примерная, д. 10</span>
             </div>
         </div>
     </div>
 
-    <!-- Шапка сайта -->
     <header>
-
         <div class="container header-content">
-            <!-- Логотип -->
             <div class="logo">
                 <a href="index.html">
-                    ❤ МедКлиника
+                    <img src="img/logo.png" alt="Логотип МедКлиника" class="logo-img">
+                    МедКлиника
                 </a>
             </div>
 
-            <!-- Навигация -->
             <nav>
-                <a class="active" href="index.html">Главная</a>
-                <a href="#">О компании</a>
+                <a href="index.html" class="active">Главная</a>
+                <a href="about.html">О компании</a>
                 <a href="services.html">Услуги</a>
-                <a href="#">Новости</a>
-                <a href="#">Портфолио</a>
-                <a href="#">Акции</a>
+                <a href="news.html">Новости</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="promo.html">Акции</a>
+                <a href="feedback.html">Отзывы</a>
                 <a href="contacts.html">Контакты</a>
+                <a href="auth.html">Вход</a>
             </nav>
-
-            <!-- Кнопки -->
-            <div class="header-buttons">
-                <button class="login-btn">
-                    Войти
-                </button>
-
-                <button class="primary-btn">
-                    Записаться
-                </button>
-            </div>
-
         </div>
-
     </header>
 
-    <!-- Главный экран -->
-    <section class="hero">
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Ваше здоровье — наш приоритет</h1>
+                <p>Современные методы диагностики и лечения в центре Москвы.</p>
+                <a href="contacts.html" class="btn">Записаться на прием</a>
+            </div>
+        </section>
 
-        <div class="container hero-content">
-            <!-- Текст -->
-            <div class="hero-text">
-                <h1>
-                    Забота о вашем здоровье — наш приоритет
-                </h1>
-                <p>
-                    Современная частная клиника с полным спектром
-                    медицинских услуг. Профессиональная диагностика,
-                    лечение и профилактика.
-                </p>
-
-                <!-- Кнопки -->
-                <div class="hero-buttons">
-                    <button class="white-btn">
-                        Записаться на прием
-                    </button>
-
-                    <button class="outline-btn">
-                        Наши услуги
-                    </button>
+        <section class="advantages">
+            <div class="container">
+                <div class="advantage-card">
+                    <div class="icon">👨‍⚕️</div>
+                    <h3>Опытные врачи</h3>
+                    <p>Специалисты высшей категории с опытом более 10 лет.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="icon">🔬</div>
+                    <h3>Оборудование</h3>
+                    <p>Новейшие системы диагностики экспертного класса.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="icon">🛡</div>
+                    <h3>Безопасность</h3>
+                    <p>Строгое соблюдение медицинских стандартов и чистоты.</p>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Изображение -->
-            <div class="hero-image">
-
-                <img src="images/doctor.png" alt="Доктор">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Преимущества -->
-    <section class="advantages">
-
-        <div class="container advantages-content">
-            <!-- Карточка -->
-            <div class="advantage-card">
-                <div class="icon">
-                    🏥
-                </div>
-                <h3>
-                    Современное оборудование
-                </h3>
-
-                <p>
-                    Используем новейшие технологии диагностики.
-                </p>
-            </div>
-
-            <!-- Карточка -->
-            <div class="advantage-card">
-
-                <div class="icon">
-                    👨‍⚕️
-                </div>
-
-                <h3>
-                    Опытные врачи
-                </h3>
-
-                <p>
-                    В нашей клинике работают профессионалы.
-                </p>
-
-            </div>
-
-            <!-- Карточка -->
-            <div class="advantage-card">
-
-                <div class="icon">
-                    ❤
-                </div>
-
-                <h3>
-                    Забота о пациентах
-                </h3>
-
-                <p>
-                    Индивидуальный подход к каждому пациенту.
-                </p>
-
-            </div>
-
-            <!-- Карточка -->
-            <div class="advantage-card">
-
-                <div class="icon">
-                    📈
-                </div>
-
-                <h3>
-                    Высокое качество
-                </h3>
-
-                <p>
-                    Качественное обслуживание и лечение.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Подвал -->
     <footer>
         <div class="container footer-content">
-
-            <p>
-                © 2026 МедКлиника
-            </p>
-
-            <p>
-                Частная медицинская клиника
-            </p>
+            <p>МедКлиника | &copy; 2026</p>
+            <p>ООО "Медицинский Центр Здоровье"</p>
+            <p>Год разработки: 2026</p>
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>

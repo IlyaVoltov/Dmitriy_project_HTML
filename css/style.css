@@ -1,325 +1,350 @@
-/* Общие стили */
+/* ===========================================
+   ОБЩИЕ НАСТРОЙКИ И ПЕРЕМЕННЫЕ
+   =========================================== */
 
+/* CSS-переменные (custom properties) для цветов и значений.
+   Это позволяет легко менять цвета во всем проекте, меняя только здесь. */
+:root {
+    --primary-color: #2563eb;      /* Основной синий цвет для акцентов */
+    --secondary-color: #1e40af;    /* Темно-синий для hover эффектов */
+    --text-dark: #1f2937;          /* Темный цвет текста */
+    --text-light: #6b7280;         /* Светлый цвет текста */
+    --bg-light: #f3f4f6;           /* Светлый фон секций */
+    --white: #ffffff;              /* Белый цвет */
+    --border-light: #e5e7eb;       /* Светлый цвет границ */
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.05); /* Мягкая тень */
+}
+
+/* Сброс стандартных отступов браузера для всех элементов */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Включает padding и border в ширину элемента */
 }
 
+/* Базовые стили для всего документа */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f7fb;
-    color: #1d1d1d;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Шрифт с запасными вариантами */
+    line-height: 1.6;                          /* Высота строки для читаемости */
+    color: var(--text-dark);                   /* Цвет текста из переменных */
+    background-color: var(--white);            /* Фон страницы */
 }
 
-/* Контейнер */
-
+/* Контейнер для центрирования контента и ограничения ширины */
 .container {
-    width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px;     /* Максимальная ширина */
+    margin: 0 auto;        /* Центрирование по горизонтали */
+    padding: 0 15px;       /* Отступы слева и справа */
 }
 
-/* Верхняя панель */
+/* ===========================================
+   ВЕРХНЯЯ ПАНЕЛЬ (TOPBAR)
+   =========================================== */
 
+/* Стили для верхней информационной панели */
 .topbar {
-    background-color: #2563eb;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 10px 0;
     font-size: 14px;
 }
 
-.topbar-content {
+/* Группировка flex-свойств для повторяющихся элементов */
+.topbar-content,
+.header-content,
+.advantages .container,
+.contacts-layout,
+.services-grid {
     display: flex;
-    justify-content: space-between;
+    gap: 20px; /* Расстояние между элементами */
 }
 
-.topbar-left {
-    display: flex;
-    gap: 30px;
+/* Выравнивание элементов в верхней панели и шапке */
+.topbar-content,
+.header-content {
+    justify-content: space-between; /* Элементы по краям */
 }
 
-/* Header */
+.topbar-left span + span {
+    margin-left: 20px; /* Отступ между элементами в верхней панели */
+}
 
+/* ===========================================
+   ШАПКА И МЕНЮ (HEADER)
+   =========================================== */
+
+/* Стили для шапки сайта */
 header {
-    background-color: white;
-    padding: 25px 0;
+    background: var(--white);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-light);
 }
 
 .header-content {
+    align-items: center; /* Вертикальное выравнивание элементов */
+}
+
+/* Стили для логотипа */
+.logo a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-/* Логотип */
-
-.logo a {
-    text-decoration: none;
-    color: #111827;
-    font-size: 36px;
+    gap: 10px;             /* Расстояние между изображением и текстом */
+    font-size: 28px;
     font-weight: bold;
+    text-decoration: none;
+    color: var(--text-dark);
 }
 
-/* Меню */
-
-nav {
-    display: flex;
-    gap: 30px;
+.logo-img {
+    width: 40px;
+    height: auto;          /* Сохраняет пропорции изображения */
+    display: block;
 }
 
+.logo span {
+    color: #ef4444; /* Красный цвет для сердечка */
+}
+
+/* Стили для навигационного меню */
 nav a {
     text-decoration: none;
-    color: #374151;
-    font-size: 18px;
+    color: var(--text-dark);
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s; /* Плавный переход цвета */
 }
 
+nav a:hover,
 nav a.active {
-    color: #2563eb;
-    font-weight: bold;
+    color: var(--primary-color); /* Изменение цвета при наведении и активной ссылке */
 }
 
-/* Кнопки */
+/* ===========================================
+   КНОПКИ (BUTTONS)
+   =========================================== */
 
-.header-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-button {
-    cursor: pointer;
+/* Общие стили для всех кнопок */
+.btn,
+.btn-sm,
+.btn-submit {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
     border-radius: 8px;
-    padding: 14px 24px;
+    transition: background 0.3s, transform 0.3s; /* Плавные переходы */
+}
+
+/* Основная кнопка */
+.btn {
+    padding: 15px 30px;
+    margin-top: 20px;
+}
+
+/* Маленькая кнопка */
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* Кнопка отправки формы */
+.btn-submit {
+    width: 100%;           /* Полная ширина */
+    padding: 15px;
+    border: none;
     font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Синяя кнопка */
-
-.primary-btn {
-    background-color: #2563eb;
-    color: white;
-    border: none;
+/* Эффект при наведении на кнопки */
+.btn:hover,
+.btn-sm:hover,
+.btn-submit:hover {
+    background: var(--secondary-color);
 }
 
-/* Белая кнопка */
+/* ===========================================
+   ГЛАВНЫЙ БАННЕР (HERO)
+   =========================================== */
 
-.white-btn {
-    background-color: white;
-    color: #2563eb;
-    border: none;
-}
-
-/* Outline кнопка */
-
-.outline-btn {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-}
-
-/* Кнопка входа */
-
-.login-btn {
-    background-color: white;
-    color: #2563eb;
-    border: 1px solid #2563eb;
-}
-
-/* Hero */
-
+/* Стили для главного баннера с фоновым изображением */
 .hero {
-    background: linear-gradient(to right, #2563eb, #1d4ed8);
-    padding: 100px 0;
-}
-
-.hero-content {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-bg.jpg') center/cover;
+    height: 500px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
 }
 
-.hero-text {
-    width: 600px;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.hero-text h1 {
-    color: white;
-    font-size: 72px;
-    line-height: 1.1;
-    margin-bottom: 30px;
-}
+/* ===========================================
+   ПРЕИМУЩЕСТВА (ADVANTAGES)
+   =========================================== */
 
-.hero-text p {
-    color: white;
-    font-size: 24px;
-    line-height: 1.5;
-    margin-bottom: 40px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-/* Картинка */
-
-.hero-image img {
-    width: 350px;
-}
-
-/* Преимущества */
-
+/* Стили для секции преимуществ */
 .advantages {
     padding: 80px 0;
+    background: var(--bg-light);
 }
 
-.advantages-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+.advantages .container {
+    justify-content: space-between; /* Распределение карточек по ширине */
 }
 
+/* Общие стили для карточек */
+.advantage-card,
+.service-card,
+.appointment-form-block {
+    background: var(--white);
+    border-radius: 15px;
+}
+
+/* Тени для карточек преимуществ и услуг */
+.advantage-card,
+.service-card {
+    box-shadow: var(--shadow-soft);
+}
+
+/* Стили для карточки преимущества */
 .advantage-card {
-    background-color: white;
-    padding: 40px 30px;
-    border-radius: 12px;
+    padding: 40px;
     text-align: center;
-    width: 270px;
+    flex: 1; /* Равномерное распределение ширины */
 }
 
-.icon {
+.advantage-card .icon,
+.service-icon {
     font-size: 40px;
     margin-bottom: 20px;
 }
 
-.advantage-card h3 {
-    margin-bottom: 15px;
-}
+/* ===========================================
+   ПОДВАЛ (FOOTER)
+   =========================================== */
 
-/* Hero страницы */
-
-.page-hero {
-    background: linear-gradient(to right, #2563eb, #1d4ed8);
-    padding: 80px 0;
-}
-
-.page-hero h1 {
-    color: white;
-    font-size: 64px;
-    margin-bottom: 20px;
-}
-
-.page-hero p {
-    color: white;
-    font-size: 24px;
-}
-
-/* Контакты */
-
-.contacts-info {
-    padding: 70px 0;
-}
-
-.contacts-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.contact-card {
-    background-color: white;
-    padding: 40px 30px;
-    border-radius: 12px;
-    width: 270px;
+/* Стили для подвала сайта */
+footer {
+    background: #111827;
+    color: #9ca3af;
+    padding: 40px 0;
     text-align: center;
 }
 
-.contact-icon {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-/* Форма */
-
-.contact-form-section {
-    padding-bottom: 80px;
-}
-
-.form-layout {
-    display: flex;
-    gap: 40px;
-}
-
-.form-block {
-    background-color: white;
-    padding: 40px;
-    border-radius: 12px;
-    width: 60%;
-}
-
-.form-block h2 {
-    margin-bottom: 20px;
-}
-
-.form-block p {
-    margin-bottom: 30px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 20px;
+.footer-content p {
     margin-bottom: 10px;
+}
+
+/* Макет для контактов в подвале */
+.contacts-layout {
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.contact-info,
+.appointment-form-block {
+    flex: 1; /* Равная ширина для блоков */
+}
+
+/* Заглушка для карты */
+.map-placeholder {
+    background: #e5e7eb;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Стили для блока формы записи */
+.appointment-form-block {
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Стили для групп формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
-input,
-textarea,
-select {
-    padding: 16px;
-    border-radius: 8px;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #d1d5db;
-    font-size: 16px;
+    border-radius: 8px;
 }
 
-/* Правая колонка */
+/* ===========================================
+   СТРАНИЦА УСЛУГ (SERVICES)
+   =========================================== */
 
-.right-column {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
+/* Стили для секции услуг */
+.services-section {
+    padding: 60px 0;
+}
+
+/* Заголовок секции */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h1 {
+    font-size: 36px;
+    color: var(--text-dark);
+}
+
+/* Сетка для карточек услуг */
+.services-grid {
+    flex-wrap: wrap;       /* Перенос на новую строку */
+    justify-content: center;
     gap: 30px;
 }
 
-.map-block,
-.route-block {
-    background-color: white;
-    padding: 40px;
-    border-radius: 12px;
+/* Стили для карточки услуги */
+.service-card {
+    border: 1px solid var(--border-light);
+    padding: 30px;
+    width: calc(33.333% - 20px); /* 3 карточки в ряд с учетом gap */
+    min-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.map-placeholder {
-    height: 300px;
-    background-color: #e5e7eb;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #6b7280;
+.service-card:hover {
+    transform: translateY(-5px); /* Подъем при наведении */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-
-footer {
-    background-color: #1d4ed8;
-    color: white;
-    padding: 30px 0;
-    margin-top: 40px;
+.service-card h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
+.service-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    min-height: 60px; /* Фиксированная высота для выравнивания */
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
 }

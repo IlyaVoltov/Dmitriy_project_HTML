@@ -1,339 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МедКлиника - Контакты</title>
-
-    <!-- Подключение CSS -->
+    <title>МедКлиника — Контакты и запись</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- Верхняя информационная панель -->
     <div class="topbar">
-
         <div class="container topbar-content">
-
-            <!-- Левая часть -->
             <div class="topbar-left">
-
                 <span>📞 +7 (495) 123-45-67</span>
-
                 <span>✉ info@medclinic.ru</span>
-
             </div>
-
-            <!-- Правая часть -->
             <div class="topbar-right">
-
-                <span>📍 Москва, ул. Примерная, 10</span>
-
+                <span>📍 Москва, ул. Примерная, д. 10</span>
             </div>
-
         </div>
-
     </div>
 
-    <!-- Шапка сайта -->
     <header>
-
         <div class="container header-content">
-
-            <!-- Логотип -->
             <div class="logo">
-
                 <a href="index.html">
-                    ❤ МедКлиника
+                    <img src="img/logo.png" alt="Логотип МедКлиника" class="logo-img">
+                    МедКлиника
                 </a>
-
             </div>
-
-            <!-- Навигация -->
             <nav>
-
                 <a href="index.html">Главная</a>
-
-                <a href="#">О компании</a>
-
+                <a href="about.html">О компании</a>
                 <a href="services.html">Услуги</a>
-
-                <a href="#">Новости</a>
-
-                <a href="#">Портфолио</a>
-
-                <a href="#">Акции</a>
-
-                <a class="active" href="contacts.html">Контакты</a>
-
+                <a href="news.html">Новости</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="promo.html">Акции</a>
+                <a href="feedback.html">Отзывы</a>
+                <a href="contacts.html" class="active">Контакты</a>
+                <a href="auth.html">Вход</a>
             </nav>
-
-            <!-- Кнопки -->
-            <div class="header-buttons">
-
-                <button class="login-btn">
-                    Войти
-                </button>
-
-                <button class="primary-btn">
-                    Записаться
-                </button>
-
-            </div>
-
         </div>
-
     </header>
 
-    <!-- Hero section -->
-    <section class="page-hero">
+    <main class="container">
+        <section class="contact-section">
+            <h1>Контакты и запись на прием</h1>
 
-        <div class="container">
-
-            <h1>
-                Свяжитесь с нами
-            </h1>
-
-            <p>
-                Мы готовы ответить на ваши вопросы и записать вас на прием
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- Контактные карточки -->
-    <section class="contacts-info">
-
-        <div class="container contacts-cards">
-
-            <!-- Карточка -->
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    📞
-                </div>
-
-                <h3>
-                    Телефон
-                </h3>
-
-                <p>
-                    +7 (495) 123-45-67
-                </p>
-
-                <p>
-                    +7 (495) 123-45-68
-                </p>
-
-            </div>
-
-            <!-- Карточка -->
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    ✉
-                </div>
-
-                <h3>
-                    Email
-                </h3>
-
-                <p>
-                    info@medclinic.ru
-                </p>
-
-                <p>
-                    support@medclinic.ru
-                </p>
-
-            </div>
-
-            <!-- Карточка -->
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    📍
-                </div>
-
-                <h3>
-                    Адрес
-                </h3>
-
-                <p>
-                    Москва, ул. Примерная, 10
-                </p>
-
-                <p>
-                    метро "Примерная"
-                </p>
-
-            </div>
-
-            <!-- Карточка -->
-            <div class="contact-card">
-
-                <div class="contact-icon">
-                    🕒
-                </div>
-
-                <h3>
-                    Режим работы
-                </h3>
-
-                <p>
-                    Пн-Пт: 8:00-20:00
-                </p>
-
-                <p>
-                    Сб-Вс: 9:00-18:00
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Форма и карта -->
-    <section class="contact-form-section">
-
-        <div class="container form-layout">
-
-            <!-- Форма -->
-            <div class="form-block">
-
-                <h2>
-                    Запись на прием
-                </h2>
-
-                <p>
-                    Заполните форму, и мы свяжемся с вами
-                </p>
-
-                <form>
-
-                    <label>
-                        Ваше имя
-                    </label>
-
-                    <input type="text" placeholder="Иван Иванов">
-
-                    <label>
-                        Телефон
-                    </label>
-
-                    <input type="tel" placeholder="+7 (___) ___-__-__">
-
-                    <label>
-                        Email
-                    </label>
-
-                    <input type="email" placeholder="example@mail.ru">
-
-                    <label>
-                        Выберите услугу
-                    </label>
-
-                    <select>
-
-                        <option>
-                            Выберите услугу
-                        </option>
-
-                        <option>
-                            Терапия
-                        </option>
-
-                        <option>
-                            Кардиология
-                        </option>
-
-                        <option>
-                            Стоматология
-                        </option>
-
-                    </select>
-
-                    <label>
-                        Комментарий
-                    </label>
-
-                    <textarea rows="5"></textarea>
-
-                    <button class="primary-btn" type="submit">
-                        Отправить
-                    </button>
-
-                </form>
-
-            </div>
-
-            <!-- Правая колонка -->
-            <div class="right-column">
-
-                <!-- Карта -->
-                <div class="map-block">
+            <div class="contacts-layout">
+                <div class="contact-info">
+                    <h3>Наш адрес</h3>
+                    <p>г. Москва, ул. Примерная, д. 10, корп. 1</p>
+                    <p><strong>Режим работы:</strong> Пн-Вс: 08:00 — 21:00</p>
+                    <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
 
                     <div class="map-placeholder">
-
-                        <p>
-                            Карта расположения клиники
-                        </p>
-
+                        <p>Интерактивная карта</p>
                     </div>
-
                 </div>
 
-                <!-- Как добраться -->
-                <div class="route-block">
+                <div class="appointment-form-block">
+                    <h3>Записаться к врачу</h3>
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label>Ваше имя *</label>
+                            <input type="text" id="userName" placeholder="Иван Иванов" required>
+                        </div>
 
-                    <h2>
-                        Как добраться
-                    </h2>
+                        <div class="form-group">
+                            <label>Ваш телефон *</label>
+                            <input type="tel" id="userPhone" placeholder="+7 (999) 000-00-00" required>
+                        </div>
 
-                    <p>
-                        <strong>На метро:</strong><br>
-                        Станция "Примерная", выход №3
-                    </p>
+                        <div class="form-group">
+                            <label>Выберите направление</label>
+                            <select id="userSpecialty">
+                                <option value="Терапевт">Терапевт</option>
+                                <option value="Кардиолог">Кардиолог</option>
+                                <option value="Стоматолог">Стоматолог</option>
+                                <option value="Диагностика">Диагностика</option>
+                            </select>
+                        </div>
 
-                    <p>
-                        <strong>На автомобиле:</strong><br>
-                        Бесплатная парковка для пациентов
-                    </p>
-
-                    <p>
-                        <strong>На автобусе:</strong><br>
-                        Маршруты 12, 45, 67
-                    </p>
-
+                        <button type="submit" class="btn-submit">Отправить заявку</button>
+                    </form>
                 </div>
-
             </div>
+        </section>
+    </main>
 
-        </div>
-
-    </section>
-
-    <!-- Подвал -->
     <footer>
-
         <div class="container footer-content">
-
-            <p>
-                © 2026 МедКлиника
-            </p>
-
-            <p>
-                Частная медицинская клиника
-            </p>
-
+            <p>МедКлиника | &copy; 2026</p>
+            <p>ООО "Медицинский Центр Здоровье"</p>
+            <p>Год разработки: 2026</p>
         </div>
-
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
-
 </html>

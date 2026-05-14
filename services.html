@@ -1,93 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <title>MedLife - Услуги</title>
-
-    <!-- Подключение CSS -->
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МедКлиника — Наши услуги</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- Шапка сайта -->
-    <header>
-
-        <!-- Логотип -->
-        <div class="logo">
-            <a href="index.html">MedLife</a>
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-left">
+                <span>📞 +7 (495) 123-45-67</span>
+                <span>✉ info@medclinic.ru</span>
+            </div>
+            <div class="topbar-right">
+                <span>📍 Москва, ул. Примерная, д. 10</span>
+            </div>
         </div>
+    </div>
 
-        <!-- Навигационное меню -->
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="service.html">Услуги</a>
-            <a href="contacts.html">Контакты</a>
-        </nav>
-
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Логотип МедКлиника" class="logo-img">
+                    МедКлиника
+                </a>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="about.html">О компании</a>
+                <a href="services.html" class="active">Услуги</a>
+                <a href="news.html">Новости</a>
+                <a href="portfolio.html">Портфолио</a>
+                <a href="promo.html">Акции</a>
+                <a href="feedback.html">Отзывы</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="auth.html">Вход</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Основной контент -->
-    <main>
+    <main class="container">
+        <section class="services-section">
+            <div class="section-header">
+                <h1>Наши направления</h1>
+                <p>Мы предоставляем полный спектр медицинской помощи для всей семьи</p>
+            </div>
 
-        <!-- Заголовок страницы -->
-        <section>
+            <div class="services-grid">
 
-            <h1>Медицинские услуги</h1>
+                <div class="service-card">
+                    <div class="service-icon">🩺</div>
+                    <h3>Терапия</h3>
+                    <p>Первичный осмотр, диагностика и составление плана лечения.</p>
+                    <span class="price">от 2 500 ₽</span>
+                    <a href="contacts.html" class="btn-sm">Записаться</a>
+                </div>
 
-            <p>
-                Наша клиника предоставляет широкий спектр медицинских услуг.
-            </p>
+                <div class="service-card">
+                    <div class="service-icon">🦷</div>
+                    <h3>Стоматология</h3>
+                    <p>Лечение кариеса, протезирование и профессиональная гигиена.</p>
+                    <span class="price">от 3 000 ₽</span>
+                    <a href="contacts.html" class="btn-sm">Записаться</a>
+                </div>
 
+                <div class="service-card">
+                    <div class="service-icon">🧠</div>
+                    <h3>Неврология</h3>
+                    <p>Лечение заболеваний центральной и периферической нервной системы.</p>
+                    <span class="price">от 2 800 ₽</span>
+                    <a href="contacts.html" class="btn-sm">Записаться</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">❤️</div>
+                    <h3>Кардиология</h3>
+                    <p>Диагностика работы сердца, ЭКГ и ведение пациентов.</p>
+                    <span class="price">от 3 200 ₽</span>
+                    <a href="contacts.html" class="btn-sm">Записаться</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Анализы</h3>
+                    <p>Более 1000 видов лабораторных исследований в короткие сроки.</p>
+                    <span class="price">от 500 ₽</span>
+                    <a href="contacts.html" class="btn-sm">Записаться</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🦶</div>
+                    <h3>Хирургия</h3>
+                    <p>Малые амбулаторные операции и консультации хирургов.</p>
+                    <span class="price">от 4 000 ₽</span>
+                    <a href="contacts.html" class="btn-sm">Записаться</a>
+                </div>
+
+            </div>
         </section>
-
-        <!-- Карточки услуг -->
-        <section class="services">
-
-            <div class="card">
-
-                <h2>Терапия</h2>
-
-                <p>
-                    Консультации опытных терапевтов и диагностика заболеваний.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h2>Кардиология</h2>
-
-                <p>
-                    Современная диагностика и лечение сердечно-сосудистых заболеваний.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h2>Стоматология</h2>
-
-                <p>
-                    Лечение зубов, профилактика и профессиональная чистка.
-                </p>
-
-            </div>
-
-        </section>
-
     </main>
 
-    <!-- Подвал сайта -->
     <footer>
-
-        <p>© 2026 MedLife</p>
-
-        <p>Частная медицинская клиника</p>
-
+        <div class="container footer-content">
+            <p>МедКлиника | &copy; 2026</p>
+            <p>ООО "Медицинский Центр Здоровье"</p>
+            <p>Год разработки: 2026</p>
+        </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
-
 </html>
